@@ -18,18 +18,25 @@ conditions = [
 ]
 
 values = ['Healthy', 'P1', 'P2', 'P3']
-data = data.sort_values(by= 'LRD')
-data = data.reset_index(drop=True)
+
 
 #set p1, p2, p3
 data['Category'] = np.select(conditions, values)
+data = data.sort_values(by= 'Category', ascending=False)
+data = data.reset_index(drop=True)
 #/-----------TABLE MANIPULATION------------------
 
 @app.route('/')
 
 @app.route('/index')
 def index():
-    return render_template('index.html', tables=[data.to_html(classes=["table table-striped table-bordered table-sm"])], titles=[''])
+    category_values = {
+        'P1': data.Category.value_counts().P1,
+        'P2': data.Category.value_counts().P2,
+        'P3': data.Category.value_counts().P3
+    }
+    return render_template('index.html', tables=[data.to_html(classes=["table table-striped table-bordered table-sm"])], 
+    titles=[''], category_values = category_values)
 
 @app.route('/EquipStats')
 def EquipStats():

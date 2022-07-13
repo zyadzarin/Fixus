@@ -14,18 +14,26 @@
         <div class="row">
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-danger text-white mb-4">
-                    <div class="card-body">P1</div>
+                    <div class="card-body">
+                        P1
+                    </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <div class="small text-white">None Detected</div>
+                        <div class="small text-white">
+                            {{category_values['P1']}} Equipment(s) Detected
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-warning text-white mb-4">
-                    <div class="card-body">P2</div>
+                    <div class="card-body">
+                        P2
+                    </div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <div class="small text-white">1 Equipment(s) Detected</div>
+                        <div class="small text-white">
+                            {{category_values['P2']}} Equipment(s) Detected
+                        </div>
                     </div>
                 </div>
             </div>
@@ -34,7 +42,9 @@
                 <div class="card bg-success text-white mb-4">
                     <div class="card-body">P3</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <div class="small text-white">None Detected</div>
+                        <div class="small text-white">
+                            {{category_values['P3']}} Equipment(s) Detected
+                        </div>
                     </div>
                 </div>
             </div>
@@ -49,7 +59,7 @@
             <div class="card-body">
 
                 <!--Displaying the converted table-->
-                {% for table in tables) %}
+                {% for table in tables %}
                 <h2>{{titles[loop.index]}}</h2>                            
                 {{ table|safe }}
                 {% endfor %}
