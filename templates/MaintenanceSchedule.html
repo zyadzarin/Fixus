@@ -18,6 +18,30 @@
 {% endblock head %}
 
 {% block body %}
+<div id="layoutSidenav_nav">
+    <nav class="sb-sidenav accordion sb-sidenav-dark" style="background-color: #012f71;" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+            <div class="nav">
+                <a class="nav-link" href="{{ url_for('index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    Equipment Monitoring
+                </a>
+                <a class="nav-link" href="{{ url_for('EquipStats') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                    Equipment Statistics
+                </a>
+                <a class="nav-link" href="{{ url_for('MaintenanceSchedule') }}" style="color:#f6a429;">
+                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    Maintenance Schedule
+                </a>
+            </div>
+        </div>
+        <div class="sb-sidenav-footer">
+            <div class="small">Logged in as:</div>
+            Gnosis 2.0
+        </div>
+    </nav>
+</div>
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Maintenance Schedule</h1>
@@ -29,50 +53,6 @@
         <div class="container p-3">
             <div id='calendar'></div>
         </div>
-
-        <!-- <div class="card mb-4">
-            <div class="card-body">
-                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                .
-            </div>
-        </div>
-        <div class="card mb-4">
-            <div class="card-header">
-                <i class="fas fa-table me-1"></i>
-                DataTable Example
-            </div>
-            <div class="card-body">
-                <table id="datatablesSimple">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <tr>
-                            
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div> -->
     </div>
 </main>
 {% endblock body%}
-
