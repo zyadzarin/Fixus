@@ -50,26 +50,26 @@
             </div>
 
         </div>
-        
+
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>
                 DataTable Example
             </div>
             <div class="card-body">
+                    
+                    <!-- Displaying the converted table -->
+                    {% for table in tables %}
+                    <h2>{{titles[loop.index]}}</h2>                            
+                    {{ table|safe }}
+                    {% endfor %}
 
-                <!--Displaying the converted table-->
-                {% for table in tables %}
-                <h2>{{titles[loop.index]}}</h2>                            
-                {{ table|safe }}
-                {% endfor %}
-              
               <p style="color:blue;">Choose csv file to upload</p>
               <form action="/show_data" target="_blank">
                     <input type="submit" value="Show CSV" />
                 </form>
-
-                <table id="datatablesSimple">
+                
+                <!-- <table id="datatablesSimple">
                     <thead>
                         <tr>
                             <th>Site Name</th>
@@ -95,9 +95,9 @@
                             
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
             </div>
-        </div>
+        </div> 
     </div>
 </main>
 {% endblock body%}
