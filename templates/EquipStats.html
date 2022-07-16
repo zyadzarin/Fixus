@@ -37,18 +37,28 @@
             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
             <li class="breadcrumb-item active">Equipment Statistics</li>
         </ol>
-
+    
+        <div class="card mb-4">
+            <div class="card-header">
+            Equipment Search Filter
+            </div>
+            <div class="card-body">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for LRD..">
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        
         <div class="card mb-4">
             <div class="card-header">
                  <i class="fa-solid fa-car-battery"></i>                                 LRD22630
             </div>
             <div class="card-body">
-                <div style="float: left">
+                <!-- <div style="float: left">
                     <img src="https://loremflickr.com/320/240" />
-                </div>
+                </div> -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkeaNTZNoIQIe7R3FCK82V8EJR8YmrweZKfw&usqp=CAU" style="float:left;width:100px;height:100px;border-radius: 50%;margin-right: 15px;">
                    <strong> Maintenance Category: </strong> P2 <br>
                    <strong> Remaining Useful Time (RUL): </strong> 27 days<br>
-                   <strong> Scheduled For Maintenance: </strong> 22 July 2022<br>
                    <strong> Scheduled For Maintenance: </strong> 22 July 2022<br>
                    <strong> Maintenance Team: </strong> Team 1 <br>
             </div>
