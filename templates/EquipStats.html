@@ -5,6 +5,31 @@
 {% endblock %}
 
 {% block body %}
+<div id="layoutSidenav_nav">
+    <nav class="sb-sidenav accordion sb-sidenav-dark" style="background-color: #012f71;" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+            <div class="nav">
+                <a class="nav-link" href="{{ url_for('index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    Equipment Monitoring
+                </a>
+                <a class="nav-link" href="{{ url_for('EquipStats') }}" style="color:#f6a429;">
+                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                    Equipment Statistics
+                </a>
+                <a class="nav-link" href="{{ url_for('MaintenanceSchedule') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    Maintenance Schedule
+                </a>
+            </div>
+        </div>
+        <div class="sb-sidenav-footer">
+            <div class="small">Logged in as:</div>
+            Gnosis 2.0
+        </div>
+    </nav>
+</div>
+
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Equipment Statistics</h1>
@@ -15,18 +40,17 @@
 
         <div class="card mb-4">
             <div class="card-header">
-                 <i class="fa-solid fa-car-battery"></i>                                 
-                LRD22630
+                 <i class="fa-solid fa-car-battery"></i>                                 LRD22630
             </div>
             <div class="card-body">
-                <div style="float: right">
+                <div style="float: left">
                     <img src="https://loremflickr.com/320/240" />
                 </div>
-                    Maintenance Category: P2 <br>
-                    Remaining Useful Time (RUL): 27 days<br>
-                    Scheduled For Maintenance: 22 July 2022<br>
-                    Scheduled For Maintenance: 22 July 2022<br>
-                    Maintenance Team: Team 1 <br>
+                   <strong> Maintenance Category: </strong> P2 <br>
+                   <strong> Remaining Useful Time (RUL): </strong> 27 days<br>
+                   <strong> Scheduled For Maintenance: </strong> 22 July 2022<br>
+                   <strong> Scheduled For Maintenance: </strong> 22 July 2022<br>
+                   <strong> Maintenance Team: </strong> Team 1 <br>
             </div>
         </div>
    
@@ -34,13 +58,12 @@
         <div class="col-lg-6">
             <div class="card mb-4">
                 <div class="card-header">
-                    <i class="fa-solid fa-chart-line"></i>                                        
-                    Maintenance Prediction
+                    <i class="fa-solid fa-chart-line"></i>                                        Maintenance Prediction
                 </div>
                 <div class="card-body">
-                    Average Failure Period: 29.0 minutes <br>
-                    Average Maintenance Period: 21.5 minutes <br>
-                    Next Expected Failure Date: 19/10/2022 <br> 
+                    <strong>Average Failure Period:</strong> 29.0 minutes <br>
+                    <strong>Average Maintenance Period:</strong> 21.5 minutes <br>
+                    <strong>Next Expected Failure Date:</strong> 19/10/2022 <br> 
                 </div>
             </div>
         </div>
