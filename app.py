@@ -1,10 +1,38 @@
+import string
 from flask import Flask, render_template, url_for
+import pandas as pd
+import numpy as np
+import requests
+
+api_url = "https://lg34yl9682.execute-api.ap-southeast-1.amazonaws.com/test/dummy-model"
+
+
+'''-------------------DUMMY DATA--------------------'''
+
+dummy_df = pd.read_csv("Data\dummy_data.csv")
+dummy_df = dummy_df.drop('y', axis = 1)
+
+
+result_array = np.zeros(500, dtype = object)   
+
+for i in range(len(dummy_df.index)):
+    current_x = dummy_df.iloc[i]['x']
+    current_z = dummy_df.iloc[i]['z']
+    response = requests.post(api_url, json= {"data":"%d, %d" %(current_x,current_z)})
+    result_array[i] = response.json()[0]
+
+print(result_array)
+
+dummy_df['prediction'] = result_array.tolist()
+print(dummy_df)
+
+
+'''/-------------------DUMMY DATA--------------------'''
+
 
 app = Flask(__name__)
 
 #-----------TABLE MANIPULATION------------------
-import pandas as pd
-import numpy as np
 df = pd.read_csv('Data\DC Battery Report.csv')
 data = df[['LRD','Rano Base Code', 'Administrative Status', 'Total Current Load']].copy()
 
