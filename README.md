@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/83915041/222216101-8bc335be-a03f-4c8c-bf68-93c2da839fc6.png)
+
 # Fixus
 Predictive maintenance for on-site telecommunication equipments
 
