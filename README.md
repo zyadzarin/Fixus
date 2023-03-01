@@ -4,6 +4,8 @@ Predictive maintenance for on-site telecommunication equipments
 ## Introduction
 Fixus is a winning submission for the UM Hackathon 2022 in the Telecommunication domain. It is a predictive maintenance dashboard web application designed to help predict telecommunication equipment failures.
 
+This repository is the web application dashboard only. The machine learning model was done in AWS Sagemaker (not included in this repo)
+
 ## Modules
 The application is composed of the following modules:
 
